@@ -13,6 +13,7 @@ public class PlayerSetUp : MonoBehaviour
     private void Awake()
     {
         PlayerMovement playerMovement = new PlayerMovement(_playerRB, _orientation, _maskToAvoid);
-        _playerController.Initialize(playerMovement);
+        PlayerLook playerLook = new PlayerLook(_orientation, Camera.main.transform);
+        _playerController.Initialize(playerMovement, playerLook);
     }
 }

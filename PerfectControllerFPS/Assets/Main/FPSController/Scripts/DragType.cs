@@ -1,5 +1,5 @@
 public enum DragType
 {
-    AirDrag = 1,
+    AirDrag = 0,
     NormalDrag = 6,
 }
