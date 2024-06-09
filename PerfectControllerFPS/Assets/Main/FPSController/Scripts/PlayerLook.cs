@@ -11,13 +11,15 @@ public class PlayerLook
     private float _sensY = 1;
     private float _sensX = 1;
     private float _xRotation = 0;
-    private float _yRotation = 0;
+    private float _yRotation;
 
 
     public PlayerLook(Transform orientation, Transform playerCamera)
     {
         _orientation = orientation;
         _playerCamera = playerCamera;
+
+        _yRotation = orientation.rotation.eulerAngles.y;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
